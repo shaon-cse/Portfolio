@@ -4,44 +4,48 @@
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
 }
-.hero{
-	height: 100vh;
-	width: 100%;
-	background-color: black;
-	background-size: cover;
-	background-position: center;
+/* Hero Section styles */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
 }
-nav{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%;
 }
-.logo{
-	color: white;
-	font-size: 35px;
-	letter-spacing: 1px;
-	cursor: pointer;
+
+.logo {
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 span{
 	color: #f9004d;
 }
-nav ul li{
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px  25px;
+nav ul {
+    list-style-type: none;
+    display: flex;
 }
-nav ul li a{
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: capitalize;
+nav ul li {
+    margin: 0 15px;
 }
-nav ul li a:hover{
-	color: #f9004d;
-	transition: .4s;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.4s;
+}
+nav ul li a:hover {
+    color: #f9004d;
 }
 .btn{
 	background-color:#f9004d;
@@ -109,10 +113,22 @@ h4{
 	padding: 100px 0px;
 	background-color: #191919;
 }
-.about img{
-	height: auto;
-	width: 430px;
+.about-text{
+	text-align: right;
+	right:2%;
 }
+
+
+/* Add this style to your existing CSS file */
+
+.about img {
+    border-radius: 50%;
+    width: 350px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+    object-fit: cover;
+    border: 3px solid #fff; /* Optional: Add a border */
+}
+
 .about-text{
 	width: 550px;
 }
@@ -138,12 +154,92 @@ h4{
 	text-transform: capitalize;
 }
 .about-text p{
-	color: #fcfc;
+	color: white;
 	letter-spacing: 1px;
 	line-height: 28px;
 	font-size: 18px;
 	margin-bottom: 45px;
 }
+.academic-courses, .skills {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #191919;
+}
+.certifications {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #000000; /* Set the background color to black */
+}
+
+.academic-courses-text{
+    width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+.skills-text {
+    width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.certifications-text h2, .academic-courses-text h2, .skills-text h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.certifications-text ul, .academic-courses-text ul, .skills-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certifications-text li, .academic-courses-text li, .skills-text li {
+    margin-bottom: 30px;
+}
+
+.certifications-text h4, .academic-courses-text h4, .skills-text h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.certifications-text p, .academic-courses-text p, .skills-text p {
+    color: rgba(7, 102, 124, 0.8) ;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.academic-courses li {
+    background-color: #8e0dc1;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin: 5px;
+}
+.academic-courses ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-text ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-text li {
+    background-color: #f9004d;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin: 5px;
+}
+
 button{
 	background-color:#f9004d;
 	color: white;
