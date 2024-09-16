@@ -5,7 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
   }
 
-
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function () {
     // Select the div container
