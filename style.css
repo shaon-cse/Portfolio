@@ -56,7 +56,7 @@ a {
 a:hover {
   color:brown;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.5rem;
   text-decoration-color: brown;
 }
 
@@ -466,4 +466,8 @@ footer p {
 .social a:hover{
 	transform: scale(1.3);
 	transition: .3s;
+}
+.itransition{
+  text-decoration: none;
+
 }
