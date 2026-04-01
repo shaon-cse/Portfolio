@@ -22,7 +22,7 @@
 
 ## 📸 Preview
 
-> *(Add screenshots here)*
+
 
 | Home | About | Photography |
 |------|----------|-------------|
