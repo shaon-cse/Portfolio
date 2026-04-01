@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+  <meta name="description" content="Shaon Paul – Aspiring SQA Engineer & CSE Graduate specializing in manual testing, QA automation, and full-stack development."/>
+  <meta name="author" content="Shaon Paul"/>
+  <meta name="keywords" content="SQA Engineer, Software Testing, QA, Manual Testing, React, Python, C++, Portfolio, Bangladesh"/>
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="Shaon Paul – SQA Engineer &amp; Developer"/>
+  <meta property="og:description" content="Portfolio showcasing QA projects, web development, AI research, and photography."/>
+  <meta property="twitter:card"   content="summary_large_image"/>
+  <title>Shaon Paul | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#" onclick="gotoPage('home');return false;">
+      <span class="fire">🔥</span>
+      Shaon<span class="dot">.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" data-page="home"        onclick="gotoPage('home');return false;"        class="active">Home</a></li>
+      <li><a href="#" data-page="about"       onclick="gotoPage('about');return false;">About</a></li>
+      <li><a href="#" data-page="projects"    onclick="gotoPage('projects');return false;">Projects</a></li>
+      <li><a href="#" data-page="photography" onclick="gotoPage('photography');return false;">Photography</a></li>
+      <li><a href="#" data-page="contact"     onclick="gotoPage('contact');return false;">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu">
+  <a href="#" data-page="home"        onclick="gotoPage('home');return false;">Home</a>
+  <a href="#" data-page="about"       onclick="gotoPage('about');return false;">About</a>
+  <a href="#" data-page="projects"    onclick="gotoPage('projects');return false;">Projects</a>
+  <a href="#" data-page="photography" onclick="gotoPage('photography');return false;">Photography</a>
+  <a href="#" data-page="contact"     onclick="gotoPage('contact');return false;">Contact</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-inner">
+
+      <!-- Left text -->
+      <div>
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Shaon Paul</h1>
+        <p class="hero-role">
+          Aspiring <span class="hl">SQA Engineer</span> &amp; CSE Graduate
+        </p>
+        <p class="hero-desc">
+          Computer Science & Engineering graduate from NIT Rourkela, awarded the <em>Study in India</em> Scholarship. I specialize in software quality assurance, including manual and exploratory testing, bug reporting, and test case design, ensuring reliable and user-friendly digital products.
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="gotoPage('projects');return false;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+            View Projects
+          </a>
+          <a href="#" class="btn-outline" onclick="gotoPage('contact');return false;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Socials -->
+        <div class="hero-socials">
+          <span class="social-label">Find me on</span>
+
+          <!-- GitHub -->
+          <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="hero-social" title="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482
+              0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462
+              -.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832
+              .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683
+              -.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59
+              0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699
+              1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0
+              1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12
+              c0-5.523-4.477-10-10-10z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/shaonpaul/" target="_blank" rel="noopener" class="hero-social" title="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853
+              0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85
+              3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0
+              0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564
+              v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771
+              24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="hero-social" title="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919
+              4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149
+              3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+              0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07
+              -1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771
+              4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014
+              7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014
+              3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12
+              24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059
+              -1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354
+              -2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0
+              1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0
+              1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+
+          <!-- LeetCode -->
+          <a href="https://leetcode.com/u/shaonpaul/" target="_blank" rel="noopener" class="hero-social" title="LeetCode">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266
+              5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062
+              2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277
+              4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54
+              -1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021
+              0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68
+              2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134
+              3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384
+              0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384
+              1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38
+              0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0
+              0-1.38-1.382z"/>
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:shaonpaul.cse@gmail.com" class="hero-social" title="Email">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div><!-- end left -->
+
+      <!-- Right image -->
+      <div class="hero-image-wrap">
+        <div class="hero-img-container">
+          <div class="hero-img-ring"></div>
+          <img class="hero-img" src="" id="heroImg" alt="Shaon Paul"/>
+        </div>
+        <div class="hero-stats-row">
+          <div class="hero-stat">
+            <div class="hero-stat-num">250+</div>
+            <div class="hero-stat-label">LeetCode Solved</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">5+</div>
+            <div class="hero-stat-label">Projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">8+</div>
+            <div class="hero-stat-label">Certifications</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end hero-inner -->
+  </section>
+
+  <!-- TECH / SKILLS CHIPS -->
+  <section class="tech-section">
+    <div class="section-inner">
+      <div class="section-label reveal">Tech Stack</div>
+      <h2 class="section-title reveal">Technologies I Work With</h2>
+      <p class="section-subtitle reveal">A toolkit spanning software testing, web development, AI/ML, and data engineering.</p>
+      <div class="tech-grid">
+        <div class="tech-chip reveal rd1"><span class="chip-icon">🧪</span> Manual Testing</div>
+        <div class="tech-chip reveal rd1"><span class="chip-icon">🔍</span> Exploratory Testing</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">📋</span> Test Case Writing</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🐛</span> Bug Reporting</div>
+        <div class="tech-chip reveal rd3"><span class="chip-icon">🌐</span> API Testing (Postman)</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Performance Testing</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> SDLC</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> STLC</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Mind Map</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Test Report</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> XMind</div>
+        <div class="tech-chip reveal rd3"><span class="chip-icon">⚡</span> JMeter / LoadRunner</div>
+        <div class="tech-chip reveal rd1"><span class="chip-icon">🤖</span> Selenium</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">📊</span> Jira / Zephyr</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Trello</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> LaTeX</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Overleaf</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> Canva</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🛠️</span> MS Office</div>
+        <div class="tech-chip reveal rd1"><span class="chip-icon">🐍</span> Python</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">🗄️</span> SQL / MySQL</div>
+        <div class="tech-chip reveal rd1"><span class="chip-icon">🐙</span> Git / GitHub</div>
+        <div class="tech-chip reveal rd2"><span class="chip-icon">💻</span> C++ / C</div>
+        <div class="tech-chip reveal rd3"><span class="chip-icon">🎨</span> HTML / CSS / Bootstrap</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-section">
+    <div class="section-inner">
+      <div class="section-label reveal">Work</div>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <p class="section-subtitle reveal">QA projects, AI research, and full-stack applications I've built and tested.</p>
+      <div class="projects-grid" id="featuredGrid">
+        <!-- Injected by JS -->
+      </div>
+      <div class="view-all-wrap reveal">
+        <a href="#" class="btn-outline" onclick="gotoPage('projects');return false;">View All Projects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Shaon<span class="dot">.</span></div>
+        <div class="footer-copy">&copy; 2026 Shaon Paul. All rights reserved.</div>
+      </div>
+      <div class="footer-socials">
+        <!-- GitHub -->
+        <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="footer-social" title="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/shaonpaul/" target="_blank" rel="noopener" class="footer-social" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="footer-social instagram" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:shaonpaul.cse@gmail.com" class="footer-social" title="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div><!-- /page-home -->
+
+
+<!-- ══════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-wrap">
+    <section class="about-hero section-center">
+      <div class="section-inner">
+        <div class="section-label reveal">About Me</div>
+        <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem)">Who I Am</h1>
+        <p class="section-subtitle reveal">SQA Engineer · CSE Graduate · Researcher · Photographer</p>
+      </div>
+    </section>
+
+    <section class="about-content">
+      <div class="section-inner">
+        <div class="about-grid">
+
+          <!-- Left col: photo + stats -->
+          <div class="reveal">
+            <img class="about-photo" id="aboutImg" src="" alt="Shaon Kumer Paul"/>
+            <div class="about-mini-stats">
+              <div class="mini-stat"><div class="mini-stat-num">250+</div><div class="mini-stat-label">LeetCode Solved</div></div>
+              <div class="mini-stat"><div class="mini-stat-num">5+</div><div class="mini-stat-label">Projects</div></div>
+              <div class="mini-stat"><div class="mini-stat-num">8+</div><div class="mini-stat-label">Certifications</div></div>
+              <div class="mini-stat"><div class="mini-stat-num">$14K</div><div class="mini-stat-label">Scholarship Awarded</div></div>
+            </div>
+          </div>
+
+          <!-- Right col: bio + timeline -->
+          <div>
+            <div class="about-bio reveal">
+              <p>
+                I'm Shaon Kumer Paul, a Computer Science &amp; Engineering graduate from the
+                <strong>National Institute of Technology (NIT), Rourkela, India</strong> and a proud
+                recipient of the <strong>Study in India scholarship</strong> from the Government of
+                India. I specialize in Software Quality Assurance, with hands-on experience in manual
+                testing, exploratory testing, API testing, and bug reporting.
+              </p>
+              <p>
+                Beyond QA, I have a strong background in problem solving using C++ and AI research —
+                most notably my work on a <strong>97.5%-accurate Crop Disease Detection system</strong>
+                and an Underwater Image Enhancement pipeline. I am a highly adaptable tester eager to build reliable, well-tested digital products.
+              </p>
+            </div>
+
+            <!-- Experience -->
+            <div class="timeline-block reveal rd1">
+              <div class="timeline-heading">💼 Experience</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Reproduction &amp; Exploratory Tester — Freelance</div>
+                  <div class="t-sub">Test IO &nbsp;·&nbsp; Feb 2026 – Present</div>
+                  <div class="t-desc">Manual and exploratory testing of web &amp; iOS/iPad apps. Tested US-based iOS apps including MyPostcard, identifying critical crashes and functional failures. Reported bugs with steps, screenshots, and severity levels.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">SQL Intern — Remote</div>
+                  <div class="t-sub">RezByte &nbsp;·&nbsp; Sept 2025 – Nov 2025</div>
+                  <div class="t-desc">Developed a Sales &amp; Customer Analytics System. Designed relational databases using advanced SQL — JOINs, CTEs, subqueries, and window functions.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="timeline-block reveal rd2">
+              <div class="timeline-heading">🎓 Education</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">B.Tech in Computer Science &amp; Engineering</div>
+                  <div class="t-sub">National Institute of Technology Rourkela, India &nbsp;·&nbsp; 2020 – 2024</div>
+                  <div class="t-desc">First Class · 68% — Thesis: Underwater Image Enhancement. Activities: Knight Club (Chess), NSS.</div>
+                  <a class="t-link" href="https://www.nitrkl.ac.in/" target="_blank" rel="noopener">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    nitrkl.ac.in
+                  </a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Higher Secondary (12th) </div>
+                  <div class="t-sub">Summit School &amp; College, Bogura &nbsp;·&nbsp; 2019</div>
+                  <div class="t-desc">GPA 5.00/5.00</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">Secondary School (10th)</div>
+                  <div class="t-sub">Summit School &amp; College, Bogura &nbsp;·&nbsp; 2017</div>
+                  <div class="t-desc">GPA 5.00/5.00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="timeline-block reveal rd3">
+              <div class="timeline-heading">⚙️ Skills</div>
+              <div class="skills-grid-2">
+                <div class="skill-pill"><span class="sdot"></span>Manual &amp; Exploratory Testing</div>
+                <div class="skill-pill"><span class="sdot"></span>SDLC / STLC </div>
+                <div class="skill-pill"><span class="sdot"></span>API Testing (Postman)</div>
+                <div class="skill-pill"><span class="sdot"></span>Performance Testing (JMeter)</div>
+                <div class="skill-pill"><span class="sdot"></span>Selenium / Automation</div>
+                <div class="skill-pill"><span class="sdot"></span>Jira / Zephyr / Trello</div>
+                <div class="skill-pill"><span class="sdot"></span>Test Plan / Test Case </div>
+                <div class="skill-pill"><span class="sdot"></span>Mind Map / XMind </div>
+                <div class="skill-pill"><span class="sdot"></span>LaTeX/ Overleaf </div>
+                <div class="skill-pill"><span class="sdot"></span>SQL / MySQL</div>
+                <div class="skill-pill"><span class="sdot"></span>C++ / C / Python</div>
+                <div class="skill-pill"><span class="sdot"></span>HTML / CSS / Bootstrap</div>
+                <div class="skill-pill"><span class="sdot"></span>Git / GitHub</div>
+                <div class="skill-pill"><span class="sdot"></span>Canva / MS Office</div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="timeline-block reveal">
+              <div class="timeline-heading">🏅 Certifications</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">The Complete 2025 Software Testing Bootcamp</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://www.udemy.com/certificate/UC-6eb7d7af-52a0-4e65-805f-28c05c43f83b/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">HTML, CSS, and Javascript for Web Developers</div>
+                  <div class="t-sub">Coursera</div>
+                  <a class="t-link" href="https://www.coursera.org/account/accomplishments/certificate/ALA7VWWL32VS" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Learn C++ Programming — Beginner to Advance</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://www.udemy.com/certificate/UC-c7defe14-a5b0-4c4a-8547-f968a27c24b5/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Python Basics for Data Science</div>
+                  <div class="t-sub">edX</div>
+                  <a class="t-link" href="https://courses.edx.org/certificates/0ae2b02f56ea4387b090f27d4d0a6d42" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Ultimate Rust Crash Course</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://udemy.com/certificate/UC-fb22e891-7b34-46af-a68f-16d8ee4b5231/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Master HTML5 from Scratch with Hands-On Course - [2022]</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://www.udemy.com/certificate/UC-7179977b-f2d4-4622-999e-09af837a8a6c/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">The Ultimate : Compiler Design for 2023 - Module 1</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://udemy.com/certificate/UC-19890ca9-015b-421a-8935-ed832b45efc6/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">The Ultimate : Compiler Design for 2023 - Module 2</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://udemy.com/certificate/UC-4bca299c-0a20-4eb4-b3fc-11d5ba5fcf28/" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Build a Full Website using WordPress</div>
+                  <div class="t-sub">Coursera</div>
+                  <a class="t-link" href="https://www.coursera.org/account/accomplishments/verify/B9YIVLKYLLO4" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">Photography for Beginners: Improve Your Photo Compositions</div>
+                  <div class="t-sub">Udemy</div>
+                  <a class="t-link" href="https://www.ude.my/UC-087cb0b0-9c0d-4a14-9884-892c0a6c2bcf" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">The Fundamentals of Digital Marketing</div>
+                  <div class="t-sub">Google Digital Garage</div>
+                  <a class="t-link" href="https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code" target="_blank" rel="noopener">View Certificate ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Honours -->
+            <div class="timeline-block reveal rd1">
+              <div class="timeline-heading">🏆 Honours &amp; Awards</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">Study in India Scholarship</div>
+                  <div class="t-sub">Ministry of Education, Government of India &nbsp;·&nbsp; May 2020</div>
+                  <div class="t-desc">Awarded $3,500/year, totalling $14,000 over 4 years to pursue B.Tech CSE at NIT Rourkela.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Research -->
+            <div class="timeline-block reveal rd2">
+              <div class="timeline-heading">🔬 Research</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">Underwater Image Enhancement — Undergraduate Thesis</div>
+                  <div class="t-sub">NIT Rourkela · 2024</div>
+                  <div class="t-desc">Automated pre-processing pipeline using Gray World Algorithm, Global Histogram Equalization (HSV), and Unsharp Masking to restore underwater images.</div>
+                  <a class="t-link" href="https://github.com/shaon-cse/Underwater-Image-Enhancement" target="_blank" rel="noopener">GitHub ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Volunteer -->
+            <div class="timeline-block reveal rd3">
+              <div class="timeline-heading">🤝 Volunteer &amp; Memberships</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div><div class="tline"></div></div>
+                <div class="tb">
+                  <div class="t-title">National Service Scheme (NSS)</div>
+                  <div class="t-sub">Rourkela, India &nbsp;·&nbsp; Dec 2020 – Apr 2021</div>
+                  <div class="t-desc">Assisted rural communities focusing on education, health awareness, and environmental sustainability.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">Knight Club — Institute Chess Club, NIT Rourkela</div>
+                  <div class="t-sub">Active Member</div>
+                  <div class="t-desc">Organized chess events, developed strategic thinking and problem-solving skills.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem Solving -->
+            <div class="timeline-block reveal">
+              <div class="timeline-heading">💡 Problem Solving</div>
+              <div class="timeline-item">
+                <div class="tdw"><div class="tdot"></div></div>
+                <div class="tb">
+                  <div class="t-title">LeetCode — 250+ Problems Solved</div>
+                  <div class="t-sub">Data Structures, Algorithms &amp; SQL · C++</div>
+                  <a class="t-link" href="https://leetcode.com/u/shaonpaul/" target="_blank" rel="noopener">leetcode.com/u/shaonpaul ↗</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /right -->
+        </div><!-- /about-grid -->
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div><div class="footer-logo">Shaon<span class="dot">.</span></div><div class="footer-copy">&copy; 2025 Shaon Kumer Paul.</div></div>
+        <div class="footer-socials">
+          <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+          <a href="https://www.linkedin.com/in/shaonpaul/" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="footer-social instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="mailto:shaonpaul.cse@gmail.com" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div><!-- /page-about -->
+
+
+<!-- ══════════════════════════════════════════
+     PROJECTS PAGE
+══════════════════════════════════════════ -->
+<div id="page-projects" class="page">
+  <div class="page-wrap">
+    <section class="projects-page-hero section-center">
+      <div class="section-inner">
+        <div class="section-label reveal">Portfolio</div>
+        <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem)">All Projects</h1>
+        <p class="section-subtitle reveal">AI research, QA projects, full-stack web apps, and more.</p>
+      </div>
+    </section>
+    <section class="projects-page-content">
+      <div class="section-inner">
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+          <button class="filter-btn" onclick="filterProjects('qa',this)">QA / Testing</button>
+          <button class="filter-btn" onclick="filterProjects('ai',this)">AI / Research</button>
+          <button class="filter-btn" onclick="filterProjects('web',this)">Web</button>
+        </div>
+        <div class="projects-grid" id="allProjectsGrid"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-inner">
+        <div><div class="footer-logo">Shaon<span class="dot">.</span></div><div class="footer-copy">&copy; 2025 Shaon Kumer Paul.</div></div>
+        <div class="footer-socials">
+          <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="footer-social instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="mailto:shaonpaul.cse@gmail.com" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div><!-- /page-projects -->
+
+
+<!-- ══════════════════════════════════════════
+     PHOTOGRAPHY PAGE
+══════════════════════════════════════════ -->
+<div id="page-photography" class="page">
+  <div class="page-wrap">
+    <section class="photo-page-hero section-center">
+      <div class="section-inner">
+        <div class="section-label reveal">Gallery</div>
+        <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem)">Photography</h1>
+        <p class="section-subtitle reveal">
+          Moments captured through the lens — landscapes, street, and life in between.
+        </p>
+      </div>
+    </section>
+    <section class="photo-page-content">
+      <div class="section-inner">
+        <div class="photo-masonry" id="photoPageGrid"></div>
+        <!-- Instagram CTA bottom -->
+        <div class="instagram-cta reveal" style="margin-top:50px">
+          <span class="instagram-cta-text">Follow me on Instagram for more</span>
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="btn-instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            @shaon.paul
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-inner">
+        <div><div class="footer-logo">Shaon<span class="dot">.</span></div><div class="footer-copy">&copy; 2025 Shaon Kumer Paul.</div></div>
+        <div class="footer-socials">
+          <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="footer-social instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="mailto:shaonpaul.cse@gmail.com" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div><!-- /page-photography -->
+
+
+<!-- ══════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-wrap">
+    <section class="contact-hero section-center">
+      <div class="section-inner">
+        <div class="section-label reveal">Get In Touch</div>
+        <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem)">Let's Work Together</h1>
+        <p class="section-subtitle reveal">Have a project, collaboration idea, or just want to say hi? I'd love to hear from you.</p>
+      </div>
+    </section>
+    <section class="contact-content">
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="contact-desc">I'm currently open to full-time SQA positions and Remote/freelance testing roles. Whether you have a bug that needs squashing or a project you want to build from scratch — let's connect.</p>
+            <div class="contact-links">
+              <a href="mailto:shaonpaul.cse@gmail.com" class="contact-link-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><div class="c-label">Email</div><div class="c-val">shaonpaul.cse@gmail.com</div></div></a>
+              <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="contact-link-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg><div><div class="c-label">GitHub</div><div class="c-val">github.com/shaon-cse</div></div></a>
+              <a href="https://www.linkedin.com/in/shaonpaul/" target="_blank" rel="noopener" class="contact-link-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/shaonpaul</div></div></a>
+              <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="contact-link-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg><div><div class="c-label">Instagram</div><div class="c-val">@shaon.paul</div></div></a>
+              <div class="contact-link-row" style="cursor:default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg><div><div class="c-label">Location</div><div class="c-val">Sherpur, Bogura, Bangladesh</div></div></div>
+            </div>
+          </div>
+ 
+          <div class="contact-form-box reveal rd2">
+            <div class="form-success" id="formSuccess">
+              <div class="fs-icon">✅</div>
+              <div class="fs-msg">Message sent successfully!</div>
+              <div class="fs-sub">I'll get back to you as soon as possible.</div>
+            </div>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-title">Send a Message</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" name="firstName" class="form-input" placeholder="Jane" required/>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" name="lastName" class="form-input" placeholder="Doe" required/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" placeholder="jane@example.com" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-input" placeholder="Project / Job Opportunity" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea name="message" class="form-textarea" placeholder="Tell me about the role or project…" required></textarea>
+              </div>
+              <button type="submit" class="form-submit">Send Message ✉️</button>
+            </form>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-inner">
+        <div><div class="footer-logo">Shaon<span class="dot">.</span></div><div class="footer-copy">&copy; 2025 Shaon Kumer Paul. All rights reserved.</div></div>
+        <div class="footer-socials">
+          <a href="https://github.com/shaon-cse" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+          <a href="https://www.linkedin.com/in/shaonpaul/" target="_blank" rel="noopener" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.instagram.com/shaon.paul/" target="_blank" rel="noopener" class="footer-social instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="mailto:shaonpaul.cse@gmail.com" class="footer-social"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div><!-- /page-contact -->
+
+<!-- ══════════════════════════════════════════
+     LIGHTBOX
+══════════════════════════════════════════ -->
+<div id="lightbox" onclick="closeLb()">
+  <button id="lb-close" onclick="closeLb()">&#x2715;</button>
+  <img id="lb-img" src="" alt="Photography" onclick="event.stopPropagation()"/>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS  (order matters)
+══════════════════════════════════════════ -->
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script>
+  // Inject hero & about photo after data.js loads
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('heroImg').src  = IMG.me;
+    document.getElementById('aboutImg').src = IMG.me;
+
+    // Featured projects on home (first 3)
+    const fg = document.getElementById('featuredGrid');
+    if (fg) {
+      fg.innerHTML = PROJECTS.slice(0, 3).map((p, i) => `
+        <div class="project-card reveal rd${i + 1}">
+          <div class="project-img-wrap">
+            <img src="${p.img}" alt="${p.title}" loading="lazy"/>
+            <div class="project-img-overlay">
+              ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="proj-link-btn proj-link-github">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                Code</a>` : ''}
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+            <div class="project-title">${p.title}</div>
+            <p class="project-desc">${p.desc}</p>
+          </div>
+        </div>`).join('');
+      setTimeout(initReveal, 80);
+    }
+  });
+</script>
+
+</body>
+</html>
