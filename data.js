@@ -17,7 +17,9 @@ const IMG ={
     proj_othoba: "./assets/Othoba.png",
     proj_underwater: "./assets/Underwater.png",
     proj_livelab: "./assets/LiveLab.png",
-    proj_crop:  "./assets/crop.jpg"
+    proj_crop:  "./assets/crop.jpg",
+    proj_portfolio: "./assets/preview-home.png",
+    proj_oldPortfolio: "./assets/OldPortfolio.png"
 };
 
 
@@ -25,6 +27,27 @@ const IMG ={
 const PROJECTS = [
   {
     id: 1,
+    title: "BDJobs Website Testing",
+    img: IMG.proj_bdjobs,
+    tags: ["Manual Testing","Test Cases","Bug Reports","SQA"],
+    desc: "Tested the Registration and Sign-In modules of BDJobs, designed and executed detailed test cases, identifying critical input validation and security bugs.",
+    github: "https://github.com/shaon-cse/BDJobs-Testing",
+    demo: null,
+    cat: "qa"
+  },
+  {
+    id: 2,
+    title: "Othoba Website Testing",
+    img: IMG.proj_othoba,
+    tags: ["Manual Testing","Test Plan","Mind Map","SQA"],
+    desc: "Created test plan, mind map, and 20 test scenarios; executed 17 test cases for Registration. Performed functional and UI testing with documented bug reports.",
+    github: "https://github.com/shaon-cse/Othoba-Testing",
+    demo: null,
+    cat: "qa"
+  },
+  {
+    
+    id: 3,
     title: "Crop Disease Detection System",
     img: IMG.proj_crop,
     tags: ["PyTorch","Flask","React.js","ResNet50","OpenCV","Tailwind CSS"],
@@ -34,7 +57,18 @@ const PROJECTS = [
     cat: "ai"
   },
   {
-    id: 2,
+    
+    id: 4,
+    title: "Personal Portfolio",
+    img: IMG.proj_portfolio,
+    tags: ["HTML", "CSS", "JavaScript"],
+    desc: "A modern, dark-themed personal portfolio website showcasing my work as an aspiring SQA Engineer, CSE Graduate, AI researcher, and Photographer.",
+    github: "https://github.com/shaon-cse/Portfolio",
+    demo: null,
+    cat: "web"
+  },
+  {
+    id: 5,
     title: "LiveLab",
     img: IMG.proj_livelab,
     tags: ["HTML","CSS","JavaScript","ReactJS"],
@@ -43,28 +77,22 @@ const PROJECTS = [
     demo: null,
     cat: "web"
   },
+
   {
-    id: 3,
-    title: "BDJobs Website Testing",
-    img: IMG.proj_bdjobs,
-    tags: ["Manual Testing","Test Cases","Bug Reports","SQA"],
-    desc: "Tested the Registration and Sign-In modules of BDJobs, designed and executed detailed test cases, identifying critical input validation and security bugs.",
-    github: "https://github.com/shaon-cse",
+    
+    id: 6,
+    title: "Personal Portfolio - Old one",
+    img: IMG.proj_oldPortfolio,
+    tags: ["HTML", "CSS", "JavaScript"],
+    desc: "A personal portfolio website showcasing my work created during my undergarad studies",
+    github: "https://github.com/shaon-cse/Old-Portfolio",
     demo: null,
-    cat: "qa"
+    cat: "web"
   },
+  
+  
   {
-    id: 4,
-    title: "Othoba Website Testing",
-    img: IMG.proj_othoba,
-    tags: ["Manual Testing","Test Plan","Mind Map","SQA"],
-    desc: "Created test plan, mind map, and 20 test scenarios; executed 17 test cases for Registration. Performed functional and UI testing with documented bug reports.",
-    github: "https://github.com/shaon-cse",
-    demo: null,
-    cat: "qa"
-  },
-  {
-    id: 5,
+    id: 7,
     title: "Underwater Image Enhancement",
     img: IMG.proj_underwater,
     tags: ["Python","OpenCV","Image Processing","Research"],
