@@ -19,7 +19,19 @@ const IMG ={
     proj_livelab: "./assets/LiveLab.png",
     proj_crop:  "./assets/crop.jpg",
     proj_portfolio: "./assets/preview-home.png",
-    proj_oldPortfolio: "./assets/OldPortfolio.png"
+    proj_oldPortfolio: "./assets/OldPortfolio.png",
+    // Certificate images — add your cert screenshots/scans to assets/ and update these paths
+    cert_testing:   "./assets/cert_testing.jpg",
+    cert_html_css:  "./assets/cert_html_css.png",
+    cert_cpp:       "./assets/cert_cpp.jpg",
+    cert_python:    "./assets/cert_python.png",
+    cert_rust:      "./assets/cert_rust.jpg",
+    cert_html5:     "./assets/cert_html5.jpg",
+    cert_compiler1: "./assets/cert_compiler1.jpg",
+    cert_compiler2: "./assets/cert_compiler2.jpg",
+    cert_wordpress: "./assets/cert_wordpress.png",
+    cert_photo:     "./assets/cert_photo.jpg",
+    cert_marketing: "./assets/cert_marketing.png",
 };
 
 
@@ -101,6 +113,124 @@ const PROJECTS = [
     demo: null,
     cat: "ai"
   },
+];
+
+// ── CERTIFICATIONS ───────────────────────────────────────────
+// Add your certificate images to assets/ and reference them here.
+// img: path to the certificate screenshot/scan (e.g. "./assets/cert_testing.png")
+// Use null if you don't have an image yet — a placeholder will show.
+
+const CERTIFICATIONS = [
+  {
+    id: 1,
+    title: "The Complete 2025 Software Testing Bootcamp",
+    img: IMG.cert_testing,
+    issuer: "Udemy",
+    tags: ["Testing", "QA", "Manual Testing"],
+    desc: "Comprehensive software testing course covering manual testing, agile methodologies, API testing with Postman, and test management with Jira.",
+    link: "https://www.udemy.com/certificate/UC-6eb7d7af-52a0-4e65-805f-28c05c43f83b/",
+    cat: "testing"
+  },
+  {
+    id: 2,
+    title: "HTML, CSS, and Javascript for Web Developers",
+    img: IMG.cert_html_css,
+    issuer: "Coursera",
+    tags: ["HTML", "CSS", "JavaScript", "Web"],
+    desc: "Johns Hopkins University course covering modern front-end web development fundamentals including responsive design and dynamic JavaScript.",
+    link: "https://www.coursera.org/account/accomplishments/certificate/ALA7VWWL32VS",
+    cat: "dev"
+  },
+  {
+    id: 3,
+    title: "Learn C++ Programming — Beginner to Advance",
+    img: IMG.cert_cpp,
+    issuer: "Udemy",
+    tags: ["C++", "Programming", "OOP"],
+    desc: "In-depth C++ programming course covering fundamentals to advanced topics including OOP, memory management, STL, and data structures.",
+    link: "https://www.udemy.com/certificate/UC-c7defe14-a5b0-4c4a-8547-f968a27c24b5/",
+    cat: "other"
+  },
+  {
+    id: 4,
+    title: "Python Basics for Data Science",
+    img: IMG.cert_python,
+    issuer: "edX",
+    tags: ["Python", "Data Science", "ML"],
+    desc: "IBM-certified course covering Python programming essentials for data science including NumPy, Pandas, and data visualization.",
+    link: "https://courses.edx.org/certificates/0ae2b02f56ea4387b090f27d4d0a6d42",
+    cat: "data"
+  },
+  {
+    id: 5,
+    title: "Ultimate Rust Crash Course",
+    img: IMG.cert_rust,
+    issuer: "Udemy",
+    tags: ["Rust", "Systems Programming"],
+    desc: "Hands-on Rust programming course covering ownership, borrowing, lifetimes, traits, and building safe and performant systems software.",
+    link: "https://udemy.com/certificate/UC-fb22e891-7b34-46af-a68f-16d8ee4b5231/",
+    cat: "other"
+  },
+  {
+    id: 6,
+    title: "Master HTML5 from Scratch with Hands-On Course",
+    img: IMG.cert_html5,
+    issuer: "Udemy",
+    tags: ["HTML5", "Web", "Frontend"],
+    desc: "Complete HTML5 course with hands-on projects covering semantic markup, forms, multimedia, canvas API, and modern best practices.",
+    link: "https://www.udemy.com/certificate/UC-7179977b-f2d4-4622-999e-09af837a8a6c/",
+    cat: "dev"
+  },
+  {
+    id: 7,
+    title: "The Ultimate: Compiler Design — Module 1",
+    img: IMG.cert_compiler1,
+    issuer: "Udemy",
+    tags: ["Compiler Design", "CS Theory"],
+    desc: "Foundation module covering lexical analysis, parsing techniques, context-free grammars, and the theory behind compiler front-ends.",
+    link: "https://udemy.com/certificate/UC-19890ca9-015b-421a-8935-ed832b45efc6/",
+    cat: "other"
+  },
+  {
+    id: 8,
+    title: "The Ultimate: Compiler Design — Module 2",
+    img: IMG.cert_compiler2,
+    issuer: "Udemy",
+    tags: ["Compiler Design", "CS Theory"],
+    desc: "Advanced module covering semantic analysis, intermediate code generation, optimization techniques, and compiler back-end design.",
+    link: "https://udemy.com/certificate/UC-4bca299c-0a20-4eb4-b3fc-11d5ba5fcf28/",
+    cat: "other"
+  },
+  {
+    id: 9,
+    title: "Build a Full Website using WordPress",
+    img: IMG.cert_wordpress,
+    issuer: "Coursera",
+    tags: ["WordPress", "Web", "CMS"],
+    desc: "Practical guide to building professional websites with WordPress — themes, plugins, page builders, SEO, and deployment.",
+    link: "https://www.coursera.org/account/accomplishments/verify/B9YIVLKYLLO4",
+    cat: "dev"
+  },
+  {
+    id: 10,
+    title: "Photography for Beginners: Improve Your Photo Compositions",
+    img: IMG.cert_photo,
+    issuer: "Udemy",
+    tags: ["Photography", "Composition"],
+    desc: "Course covering the fundamental rules of photo composition — rule of thirds, leading lines, framing, and visual storytelling.",
+    link: "https://www.ude.my/UC-087cb0b0-9c0d-4a14-9884-892c0a6c2bcf",
+    cat: "other"
+  },
+  {
+    id: 11,
+    title: "The Fundamentals of Digital Marketing",
+    img: null,
+    issuer: "Google Digital Garage",
+    tags: ["Marketing", "Digital", "SEO"],
+    desc: "Google-certified course covering digital marketing fundamentals including SEO, SEM, social media, email marketing, and analytics.",
+    link: "https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code",
+    cat: "other"
+  }
 ];
 
 const PHOTOS = [

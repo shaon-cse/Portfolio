@@ -437,6 +437,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--violet-dim); border-color: var(--violet-border); color: #c4b5fd;
 }
 
+/* ── CERTIFICATIONS PAGE ─────────────────────────────────────── */
+.cert-page-hero    { padding: 80px 20px 36px; }
+.cert-page-content { padding: 0 20px 80px; }
+
+/* Issuer badge floated top-left of the card image */
+.cert-issuer-badge {
+  position: absolute; top: 10px; left: 10px;
+  padding: 3px 10px; border-radius: 6px;
+  font-size: .7rem; font-weight: 600; letter-spacing: .04em;
+  pointer-events: none;
+}
+
+/* "View Certificate" overlay button — teal-ish to distinguish from project's github/demo */
+.proj-link-cert {
+  background: rgba(139,92,246,0.85);
+  color: #fff;
+  border: 1px solid rgba(139,92,246,0.6);
+}
+.proj-link-cert:hover { background: rgba(139,92,246,1); }
+
 /* ── PHOTOGRAPHY PAGE ────────────────────────────────────────── */
 .photo-page-hero    { padding: 80px 20px 36px; }
 .photo-page-content { padding: 0 20px 80px; }

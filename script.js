@@ -57,6 +57,59 @@ function filterProjects(cat, btn) {
   renderAllProjects();
 }
 
+/* ── RENDER CERTIFICATIONS ───────────────────────────────────── */
+let curCertFilter = 'all';
+
+const CERT_ISSUER_COLOR = {
+  'Udemy':                { bg: 'rgba(139,92,246,0.15)', border: 'rgba(139,92,246,0.35)', text: '#c4b5fd' },
+  'Coursera':             { bg: 'rgba(29,158,117,0.15)', border: 'rgba(29,158,117,0.35)', text: '#6ee7b7' },
+  'edX':                  { bg: 'rgba(239,159,39,0.15)',  border: 'rgba(239,159,39,0.35)',  text: '#fcd34d' },
+  'Google Digital Garage':{ bg: 'rgba(59,130,246,0.15)', border: 'rgba(59,130,246,0.35)', text: '#93c5fd' },
+};
+
+function certPlaceholder(title, issuer) {
+  const c = CERT_ISSUER_COLOR[issuer] || { bg:'rgba(51,65,85,0.6)', border:'rgba(100,116,139,0.4)', text:'#94a3b8' };
+  return `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="186"><rect width="600" height="186" fill="${c.bg}"/><rect x="1" y="1" width="598" height="184" fill="none" stroke="${c.border}" stroke-width="1.5" rx="3"/><text x="300" y="80" font-family="system-ui,sans-serif" font-size="40" fill="${c.text}" text-anchor="middle" dominant-baseline="middle" opacity="0.6">&#x1F3C5;</text><text x="300" y="130" font-family="system-ui,sans-serif" font-size="13" fill="${c.text}" text-anchor="middle" opacity="0.5">${issuer}</text></svg>`)}`;
+}
+
+function renderCertCard(c) {
+  const imgSrc = c.img || certPlaceholder(c.title, c.issuer);
+  const col = CERT_ISSUER_COLOR[c.issuer] || { bg:'rgba(51,65,85,0.6)', border:'rgba(100,116,139,0.4)', text:'#94a3b8' };
+  return `
+    <div class="project-card reveal">
+      <div class="project-img-wrap">
+        <img src="${imgSrc}" alt="${c.title}" loading="lazy"/>
+        <div class="project-img-overlay">
+          <a href="${c.link}" target="_blank" rel="noopener" class="proj-link-btn proj-link-cert">
+            ${ICONS.external} View Certificate
+          </a>
+        </div>
+        <div class="cert-issuer-badge" style="background:${col.bg};border:1px solid ${col.border};color:${col.text}">${c.issuer}</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">${c.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+        <div class="project-title">${c.title}</div>
+        <p class="project-desc">${c.desc}</p>
+      </div>
+    </div>`;
+}
+
+function renderAllCerts() {
+  const grid = document.getElementById('allCertsGrid');
+  if (!grid) return;
+  const list = curCertFilter === 'all' ? CERTIFICATIONS : CERTIFICATIONS.filter(c => c.cat === curCertFilter);
+  grid.innerHTML = list.map(renderCertCard).join('');
+  setTimeout(initReveal, 50);
+}
+
+function filterCerts(cat, btn) {
+  curCertFilter = cat;
+  const bar = btn.closest('.filter-bar');
+  bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAllCerts();
+}
+
 /* ── RENDER PHOTOGRAPHY (HOME) ──────────────────────────────── */
 function renderHomePhotos() {
   const grid = document.getElementById('homePhotoGrid');
@@ -118,8 +171,9 @@ function gotoPage(name) {
 
   window.scrollTo({ top: 0 });
 
-  if (name === 'projects')    renderAllProjects();
-  if (name === 'photography') renderPhotoPage();
+  if (name === 'projects')       renderAllProjects();
+  if (name === 'photography')    renderPhotoPage();
+  if (name === 'certifications') renderAllCerts();
 
   setTimeout(initReveal, 80);
 }
@@ -186,6 +240,33 @@ async function handleSubmit(e) {
 
 /* ── INIT ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  renderHomePhotos();   // already calls setTimeout(initReveal, 80) internally
-  renderAllProjects();  // already calls setTimeout(initReveal, 50) internally
+  renderHomePhotos();
+  renderAllProjects();
+
+  // Featured certifications on home (first 3)
+  const fcg = document.getElementById('featuredCertGrid');
+  if (fcg) {
+    fcg.innerHTML = CERTIFICATIONS.slice(0, 3).map((c, i) => {
+      const imgSrc = c.img || certPlaceholder(c.title, c.issuer);
+      const col = CERT_ISSUER_COLOR[c.issuer] || { bg:'rgba(51,65,85,0.6)', border:'rgba(100,116,139,0.4)', text:'#94a3b8' };
+      return `
+        <div class="project-card reveal rd${i + 1}">
+          <div class="project-img-wrap">
+            <img src="${imgSrc}" alt="${c.title}" loading="lazy"/>
+            <div class="project-img-overlay">
+              <a href="${c.link}" target="_blank" rel="noopener" class="proj-link-btn proj-link-cert">
+                ${ICONS.external} View Certificate
+              </a>
+            </div>
+            <div class="cert-issuer-badge" style="background:${col.bg};border:1px solid ${col.border};color:${col.text}">${c.issuer}</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">${c.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+            <div class="project-title">${c.title}</div>
+            <p class="project-desc">${c.desc}</p>
+          </div>
+        </div>`;
+    }).join('');
+    setTimeout(initReveal, 80);
+  }
 });
