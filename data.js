@@ -15,11 +15,13 @@ const IMG ={
     p09: "./assets/P9.JPEG",
     proj_bdjobs: "./assets/BDJobs.png",
     proj_othoba: "./assets/Othoba.png",
+    proj_booking: "./assets/Booking.png",
     proj_underwater: "./assets/Underwater.png",
     proj_livelab: "./assets/LiveLab.png",
     proj_crop:  "./assets/crop.jpg",
     proj_portfolio: "./assets/preview-home.png",
     proj_oldPortfolio: "./assets/OldPortfolio.png",
+    
     // Certificate images — add your cert screenshots/scans to assets/ and update these paths
     cert_testing:   "./assets/cert_testing.jpg",
     cert_html_css:  "./assets/cert_html_css.png",
@@ -58,8 +60,18 @@ const PROJECTS = [
     cat: "qa"
   },
   {
-    
     id: 3,
+    title: "Booking.Com Website Testing",
+    img: IMG.proj_booking,
+    tags: ["Manual Testing","Test Plan","Mind Map","SQA"],
+    desc: "QA project analyzing Booking.com through exploratory testing, identifying critical bugs, designing test cases, and visualizing the system using an XMind mind map.",
+    github: "https://github.com/shaon-cse/Booking.Com-QA-Testing",
+    demo: null,
+    cat: "qa"
+  },
+  {
+    
+    id: 4,
     title: "Crop Disease Detection System",
     img: IMG.proj_crop,
     tags: ["PyTorch","Flask","React.js","ResNet50","OpenCV","Tailwind CSS"],
@@ -70,7 +82,7 @@ const PROJECTS = [
   },
   {
     
-    id: 4,
+    id: 5,
     title: "Personal Portfolio",
     img: IMG.proj_portfolio,
     tags: ["HTML", "CSS", "JavaScript"],
@@ -80,7 +92,7 @@ const PROJECTS = [
     cat: "web"
   },
   {
-    id: 5,
+    id: 6,
     title: "LiveLab",
     img: IMG.proj_livelab,
     tags: ["HTML","CSS","JavaScript","ReactJS"],
@@ -92,7 +104,7 @@ const PROJECTS = [
 
   {
     
-    id: 6,
+    id: 7,
     title: "Personal Portfolio - Old one",
     img: IMG.proj_oldPortfolio,
     tags: ["HTML", "CSS", "JavaScript"],
@@ -104,7 +116,7 @@ const PROJECTS = [
   
   
   {
-    id: 7,
+    id: 8,
     title: "Underwater Image Enhancement",
     img: IMG.proj_underwater,
     tags: ["Python","OpenCV","Image Processing","Research"],
