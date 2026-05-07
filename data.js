@@ -34,6 +34,11 @@ const IMG ={
     cert_wordpress: "./assets/cert_wordpress.png",
     cert_photo:     "./assets/cert_photo.jpg",
     cert_marketing: "./assets/cert_marketing.png",
+    api1: "./assets/API1.png",
+    api2: "./assets/API2.png",
+    jmeter1: "./assets/Jmeter1.png",
+    jmeter2: "./assets/Jmeter2.png",
+    sql: "./assets/SQL.png",
 };
 
 
@@ -144,7 +149,58 @@ const CERTIFICATIONS = [
     cat: "testing"
   },
   {
-    id: 2,
+  id: 2,
+  title: "Apply API Testing Fundamentals Using Postman",
+  img: IMG.api2,
+  issuer: "EDUCBA",
+  tags: ["API Testing", "Postman", "QA"],
+  desc: "Course covering core API testing fundamentals using Postman, including REST API concepts, request methods, assertions, and test collection management.",
+  link: "https://coursera.org/verify/3Z310X9UD1JP",
+  cat: "testing"
+ },
+ {
+  id: 3,
+  title: "Performance Testing with JMeter for Absolute Beginners",
+  img: IMG.jmeter2,
+  issuer: "Coursera",
+  tags: ["JMeter", "Performance Testing", "DevOps"],
+  desc: "Project-based course introducing performance testing concepts using JMeter, including load simulation, result analysis, and identifying application bottlenecks.",
+  link: "https://coursera.org/verify/548HMEP4MDSX",
+  cat: "testing"
+ },
+ {
+  id: 4,
+  title: "SQL Foundations",
+  img: IMG.sql,
+  issuer: "Microsoft",
+  tags: ["SQL", "Database", "Microsoft"],
+  desc: "Microsoft-authorized course covering SQL fundamentals including querying, filtering, joining tables, aggregations, and foundational database concepts.",
+  link: "https://coursera.org/verify/509ZT7N9GSU7",
+  cat: "other"
+ },
+ {
+  id: 5,
+  title: "API Testing a real web application via Postman",
+  img: IMG.api1,
+  issuer: "Coursera",
+  tags: ["API Testing", "Postman", "Web Application"],
+  desc: "Hands-on project covering API testing of a real web application using Postman, including request building, response validation, and test automation.",
+  link: "https://coursera.org/verify/LAP44TAMO9SY",
+  cat: "testing"
+},
+
+{
+  id: 6,
+  title: "Jmeter Training for Beginners",
+  img: IMG.jmeter1,
+  issuer: "Simplilearn",
+  tags: ["JMeter", "Performance Testing", "Load Testing"],
+  desc: "Beginner-level course on Apache JMeter covering test plan creation, thread groups, samplers, listeners, and basic performance test execution.",
+  link: "https://coursera.org/verify/U5UZ30R920KE",
+  cat: "testing"
+},
+ {
+    id: 7,
     title: "HTML, CSS, and Javascript for Web Developers",
     img: IMG.cert_html_css,
     issuer: "Coursera",
@@ -154,7 +210,7 @@ const CERTIFICATIONS = [
     cat: "dev"
   },
   {
-    id: 3,
+    id: 8,
     title: "Learn C++ Programming — Beginner to Advance",
     img: IMG.cert_cpp,
     issuer: "Udemy",
@@ -164,7 +220,7 @@ const CERTIFICATIONS = [
     cat: "other"
   },
   {
-    id: 4,
+    id: 9,
     title: "Python Basics for Data Science",
     img: IMG.cert_python,
     issuer: "edX",
@@ -174,7 +230,7 @@ const CERTIFICATIONS = [
     cat: "data"
   },
   {
-    id: 5,
+    id: 10,
     title: "Ultimate Rust Crash Course",
     img: IMG.cert_rust,
     issuer: "Udemy",
@@ -184,7 +240,7 @@ const CERTIFICATIONS = [
     cat: "other"
   },
   {
-    id: 6,
+    id: 11,
     title: "Master HTML5 from Scratch with Hands-On Course",
     img: IMG.cert_html5,
     issuer: "Udemy",
@@ -194,7 +250,7 @@ const CERTIFICATIONS = [
     cat: "dev"
   },
   {
-    id: 7,
+    id: 12,
     title: "The Ultimate: Compiler Design — Module 1",
     img: IMG.cert_compiler1,
     issuer: "Udemy",
@@ -204,7 +260,7 @@ const CERTIFICATIONS = [
     cat: "other"
   },
   {
-    id: 8,
+    id: 13,
     title: "The Ultimate: Compiler Design — Module 2",
     img: IMG.cert_compiler2,
     issuer: "Udemy",
@@ -214,7 +270,7 @@ const CERTIFICATIONS = [
     cat: "other"
   },
   {
-    id: 9,
+    id: 14,
     title: "Build a Full Website using WordPress",
     img: IMG.cert_wordpress,
     issuer: "Coursera",
@@ -224,7 +280,7 @@ const CERTIFICATIONS = [
     cat: "dev"
   },
   {
-    id: 10,
+    id: 15,
     title: "Photography for Beginners: Improve Your Photo Compositions",
     img: IMG.cert_photo,
     issuer: "Udemy",
@@ -234,7 +290,7 @@ const CERTIFICATIONS = [
     cat: "other"
   },
   {
-    id: 11,
+    id: 16,
     title: "The Fundamentals of Digital Marketing",
     img: null,
     issuer: "Google Digital Garage",
@@ -242,7 +298,8 @@ const CERTIFICATIONS = [
     desc: "Google-certified course covering digital marketing fundamentals including SEO, SEM, social media, email marketing, and analytics.",
     link: "https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code",
     cat: "other"
-  }
+  },
+  
 ];
 
 const PHOTOS = [
