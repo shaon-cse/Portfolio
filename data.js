@@ -21,6 +21,7 @@ const IMG ={
     proj_crop:  "./assets/crop.jpg",
     proj_portfolio: "./assets/preview-home.png",
     proj_oldPortfolio: "./assets/OldPortfolio.png",
+    proj_database: "./assets/databaseTesting.png",
     
     // Certificate images — add your cert screenshots/scans to assets/ and update these paths
     cert_testing:   "./assets/cert_testing.jpg",
@@ -44,8 +45,19 @@ const IMG ={
 
 
 const PROJECTS = [
+
   {
     id: 1,
+    title: "Database Testing Project – E-Commerce Order Management System",
+    img: IMG.proj_database,
+    tags: ["Database Testing","Test Cases","SQL","SQA","MySQL"],
+    desc: "This project demonstrates real-world database testing techniques using an E-Commerce Order Management System built with MySQL.",
+    github: "https://github.com/shaon-cse/Database-Testing-Project-E-Commerce-Order-Management-System",
+    demo: null,
+    cat: "qa"
+  },
+  {
+    id: 2,
     title: "BDJobs Website Testing",
     img: IMG.proj_bdjobs,
     tags: ["Manual Testing","Test Cases","Bug Reports","SQA"],
@@ -55,7 +67,7 @@ const PROJECTS = [
     cat: "qa"
   },
   {
-    id: 2,
+    id: 3,
     title: "Othoba Website Testing",
     img: IMG.proj_othoba,
     tags: ["Manual Testing","Test Plan","Mind Map","SQA"],
@@ -65,7 +77,7 @@ const PROJECTS = [
     cat: "qa"
   },
   {
-    id: 3,
+    id: 4,
     title: "Booking.Com Website Testing",
     img: IMG.proj_booking,
     tags: ["Manual Testing","Test Plan","Mind Map","SQA"],
@@ -76,7 +88,7 @@ const PROJECTS = [
   },
   {
     
-    id: 4,
+    id: 5,
     title: "Crop Disease Detection System",
     img: IMG.proj_crop,
     tags: ["PyTorch","Flask","React.js","ResNet50","OpenCV","Tailwind CSS"],
@@ -87,7 +99,7 @@ const PROJECTS = [
   },
   {
     
-    id: 5,
+    id: 6,
     title: "Personal Portfolio",
     img: IMG.proj_portfolio,
     tags: ["HTML", "CSS", "JavaScript"],
@@ -97,7 +109,7 @@ const PROJECTS = [
     cat: "web"
   },
   {
-    id: 6,
+    id: 7,
     title: "LiveLab",
     img: IMG.proj_livelab,
     tags: ["HTML","CSS","JavaScript","ReactJS"],
@@ -109,7 +121,7 @@ const PROJECTS = [
 
   {
     
-    id: 7,
+    id: 8,
     title: "Personal Portfolio - Old one",
     img: IMG.proj_oldPortfolio,
     tags: ["HTML", "CSS", "JavaScript"],
@@ -121,7 +133,7 @@ const PROJECTS = [
   
   
   {
-    id: 8,
+    id: 9,
     title: "Underwater Image Enhancement",
     img: IMG.proj_underwater,
     tags: ["Python","OpenCV","Image Processing","Research"],
