@@ -121,10 +121,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--violet-light); background: var(--violet-dim);
 }
 
-/* ── PAGES ───────────────────────────────────────────────────── */
-.page { display: none; }
-.page.active { display: block; }
-.page-wrap { padding-top: var(--nav-h); min-height: 100vh; }
+/* ── SECTIONS (single-page scroll) ────────────────────────────── */
+section[id] { scroll-margin-top: var(--nav-h); }
+#about, #projects, #certifications, #photography, #contact {
+  border-top: 1px solid var(--border2);
+}
 
 /* ── BUTTONS ─────────────────────────────────────────────────── */
 .btn-primary {

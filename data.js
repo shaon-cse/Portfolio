@@ -4,6 +4,7 @@
 
 const IMG ={
     me: "./assets/shaon.jpg",
+    me2: "./assets/shaon2.jpeg",
     p01: "./assets/P1.jpeg",
     p02: "./assets/P2.JPEG",
     p03: "./assets/P3.jpeg",

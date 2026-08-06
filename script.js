@@ -1,6 +1,6 @@
 /* ============================================================
-   script.js — Shaon Kumer Paul Portfolio
-   Navigation · Filters · Lightbox · Scroll reveal · Forms
+   script.js — Shaon Kumer Paul Portfolio (Single-Page Scroll)
+   Filters · Lightbox · Scroll reveal · Scrollspy nav · Forms
    ============================================================ */
 
 /* ── SVG ICONS ───────────────────────────────────────────────── */
@@ -28,7 +28,7 @@ function renderCard(p) {
   return `
     <div class="project-card reveal">
       <div class="project-img-wrap">
-        <img src="${p.img}" alt="${p.title}"/>
+        <img src="${p.img}" alt="${p.title}" loading="lazy"/>
         <div class="project-img-overlay">
           ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="proj-link-btn proj-link-github">${ICONS.github} Code</a>` : ''}
           ${p.demo   ? `<a href="${p.demo}"   target="_blank" rel="noopener" class="proj-link-btn proj-link-demo">${ICONS.external} Demo</a>` : ''}
@@ -52,7 +52,8 @@ function renderAllProjects() {
 
 function filterProjects(cat, btn) {
   curFilter = cat;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  const bar = btn.closest('.filter-bar');
+  bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderAllProjects();
 }
@@ -61,10 +62,11 @@ function filterProjects(cat, btn) {
 let curCertFilter = 'all';
 
 const CERT_ISSUER_COLOR = {
-  'Udemy':                { bg: 'rgba(139,92,246,0.15)', border: 'rgba(139,92,246,0.35)', text: '#c4b5fd' },
+  'Udemy':                { bg: 'rgba(139,92,246,0.15)', border: 'rgba(139,92,246,0.35)', text: '#8670dd' },
   'Coursera':             { bg: 'rgba(29,158,117,0.15)', border: 'rgba(29,158,117,0.35)', text: '#6ee7b7' },
   'edX':                  { bg: 'rgba(239,159,39,0.15)',  border: 'rgba(239,159,39,0.35)',  text: '#fcd34d' },
-  'Google Digital Garage':{ bg: 'rgba(59,130,246,0.15)', border: 'rgba(59,130,246,0.35)', text: '#93c5fd' },
+  'Google Digital Garage':{ bg: 'rgba(59,130,246,0.15)', border: 'rgba(59,130,246,0.35)', text: '#639bdc' },
+  'Microsoft':{ bg: 'rgba(59,130,246,0.15)', border: 'rgba(59,130,246,0.35)', text: '#d94e94' },
 };
 
 function certPlaceholder(title, issuer) {
@@ -110,21 +112,6 @@ function filterCerts(cat, btn) {
   renderAllCerts();
 }
 
-/* ── RENDER PHOTOGRAPHY (HOME) ──────────────────────────────── */
-function renderHomePhotos() {
-  const grid = document.getElementById('homePhotoGrid');
-  if (!grid) return;
-  const items = PHOTOS.slice(0, 6);
-  grid.innerHTML = items.map((p, i) => `
-    <div class="photo-home-item reveal rd${(i % 3) + 1}" onclick="openLb('${p.src}')">
-      <img src="${p.src}" alt="${p.alt}" loading="lazy"/>
-      <div class="photo-home-overlay">
-        <span class="photo-home-caption">${p.alt}</span>
-      </div>
-    </div>`).join('');
-  setTimeout(initReveal, 80);
-}
-
 /* ── RENDER PHOTOGRAPHY PAGE ─────────────────────────────────── */
 function renderPhotoPage() {
   const grid = document.getElementById('photoPageGrid');
@@ -149,34 +136,10 @@ function closeLb() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
 
-/* ── NAVBAR SCROLL ───────────────────────────────────────────── */
+/* ── NAVBAR SCROLL (solid background once scrolled) ──────────── */
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', scrollY > 10);
 });
-
-/* ── PAGE NAVIGATION ─────────────────────────────────────────── */
-function gotoPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const pg = document.getElementById('page-' + name);
-  if (pg) pg.classList.add('active');
-
-  document.querySelectorAll('[data-page]').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === name);
-  });
-
-  // close mobile menu
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-  document.body.style.overflow = '';
-
-  window.scrollTo({ top: 0 });
-
-  if (name === 'projects')       renderAllProjects();
-  if (name === 'photography')    renderPhotoPage();
-  if (name === 'certifications') renderAllCerts();
-
-  setTimeout(initReveal, 80);
-}
 
 /* ── MOBILE MENU ─────────────────────────────────────────────── */
 function toggleMenu() {
@@ -187,6 +150,33 @@ function toggleMenu() {
   document.body.style.overflow = open ? 'hidden' : '';
 }
 
+// Close mobile menu whenever a nav link (desktop or mobile) is clicked
+document.addEventListener('click', e => {
+  const link = e.target.closest('[data-page]');
+  if (!link) return;
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
+});
+
+/* ── SCROLLSPY: highlight nav link for section in view ────────── */
+function initScrollspy() {
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const navLinks = document.querySelectorAll('[data-page]');
+
+  const setActive = name => {
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.page === name));
+  };
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(s => spy.observe(s));
+}
+
 /* ── SCROLL REVEAL ───────────────────────────────────────────── */
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
@@ -194,19 +184,17 @@ function initReveal() {
       if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.page.active .reveal:not(.visible)')
+  document.querySelectorAll('.reveal:not(.visible)')
     .forEach(el => obs.observe(el));
 }
 
 /* ── CONTACT FORM ────────────────────────────────────────────── */
-
-
 async function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
   btn.textContent = 'Sending…';
   btn.disabled = true;
- 
+
   const data = {
     firstName: e.target.querySelector('[name="firstName"]').value,
     lastName:  e.target.querySelector('[name="lastName"]').value,
@@ -214,7 +202,7 @@ async function handleSubmit(e) {
     subject:   e.target.querySelector('[name="subject"]').value,
     message:   e.target.querySelector('[name="message"]').value,
   };
- 
+
   try {
     const res = await fetch('https://formspree.io/f/mreolajv', {
       method: 'POST',
@@ -224,7 +212,7 @@ async function handleSubmit(e) {
         'Content-Type': 'application/json'
       }
     });
- 
+
     if (res.ok) {
       document.getElementById('contactForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
@@ -240,8 +228,9 @@ async function handleSubmit(e) {
 
 /* ── INIT ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  renderHomePhotos();
   renderAllProjects();
+  renderAllCerts();
+  renderPhotoPage();
 
   // Featured certifications on home (first 3)
   const fcg = document.getElementById('featuredCertGrid');
@@ -269,4 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
     setTimeout(initReveal, 80);
   }
+
+  initScrollspy();
+  setTimeout(initReveal, 80);
 });
