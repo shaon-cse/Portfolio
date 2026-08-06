@@ -612,7 +612,7 @@ footer {
   .hero-desc { margin: 0 auto 32px; }
   .hero-img, .hero-img-container { width: 230px; height: 230px; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo { aspect-ratio: 16/9; }
+  .about-photo { aspect-ratio: 3/4; }
   .contact-grid { grid-template-columns: 1fr; }
   .photo-masonry { columns: 2; }
 }
